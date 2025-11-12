@@ -1,0 +1,47 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de entorno y credenciales
+.env
+.env.local
+*.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación o cache
+dist/
+build/
+.cache/
+.tmp/
+
+# Archivos de logs
+logs/
+*.log
+
+# Archivos de configuración de VSCode y similares
+.vscode/
+.idea/
+
+# Archivos temporales de test o runtime
+coverage/
+*.pid
+*.seed
+*.tgz
+
+# Base de datos o backups locales
+*.sqlite
+*.db
+*.bak
+
+# Output de Sequelize CLI (si se usa)
+migrations/
+seeders/
+
+# Archivos del sistema operativo
+ehthumbs.db
+desktop.ini
