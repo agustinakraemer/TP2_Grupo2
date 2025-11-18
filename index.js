@@ -1,6 +1,6 @@
 const express = require('express');
-//conexión activa a MySQL
-const { sequelize } = require('./models'); // ahora lo traemos de models
+const { sequelize } = require('./models'); 
+const usuarioRutas = require('./routes/usuarioRutas');
 
 const app = express();
 const PORT = 3000;
@@ -11,6 +11,11 @@ app.use(express.json());
 app.get('/ping', (req, res) => {
   res.json({ mensaje: 'pong 🏓' });
 });
+
+//CONECTAMOS LAS RUTAS DE USUARIOS
+console.log("✅ Cargando rutas de usuarios...");
+app.use('/usuarios', usuarioRutas);
+
 
 // Conexión + sync de modelos + levantar server
 sequelize.authenticate()
