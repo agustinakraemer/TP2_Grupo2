@@ -6,7 +6,6 @@ async function obtenerTodos() {
 }
 
 async function obtenerPorId(id) {
-      console.log(id);
   return await Usuario.findByPk(id);
 }
 
@@ -26,9 +25,15 @@ async function eliminarUsuario(id) {
   return usuario;
 }
 
+async function eliminarTodos() {
+  await Usuario.destroy({ where: {}, truncate: { cascade: true } });
+}
+
+
 module.exports = {
   obtenerTodos,
   obtenerPorId,
   crearUsuario,
-  eliminarUsuario
+  eliminarUsuario,
+  eliminarTodos
 };
