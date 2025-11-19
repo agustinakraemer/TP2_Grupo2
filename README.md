@@ -49,10 +49,10 @@ CREAR USUARIO
 
 CREAR CLASE
 {
-  "nombre": "Pilates Piso",
-  "dia": "Lunes",
-  "horario": "18:00",
-  "cupo": 10
+  "nombre": "Clase de Pilates Reformer",
+  "fecha": "2025-11-20",
+  "hora": "10:00",
+  "capacidad": 10
 }
 
 CREAR RESERVA

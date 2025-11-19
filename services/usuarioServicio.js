@@ -6,6 +6,7 @@ async function obtenerTodos() {
 }
 
 async function obtenerPorId(id) {
+      console.log(id);
   return await Usuario.findByPk(id);
 }
 
@@ -13,7 +14,8 @@ async function crearUsuario(datos) {
   return await Usuario.create({
     nombre: datos.nombre,
     email: datos.email,
-    telefono: datos.telefono
+    telefono: datos.telefono,
+    isAdmin: datos.isAdmin || false
   });
 }
 

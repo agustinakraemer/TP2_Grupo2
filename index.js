@@ -31,8 +31,7 @@ app.use('/clases', claseRutas);
 sequelize.authenticate()
   .then(() => {
     console.log('Conectado a MySQL correctamente');
-    return sequelize.sync(); // crea tablas usuarios, clases, reservas si no existen
-    // si querés forzar cambios de columnas: sequelize.sync({ alter: true })
+    return sequelize.sync({ alter: true });
   })
   .then(() => {
     console.log('Modelos sincronizados con la base de datos');
