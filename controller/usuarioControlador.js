@@ -43,9 +43,20 @@ async function eliminarUsuario(req, res, next) {
   }
 }
 
+async function eliminarTodos(req, res, next) {
+  try {
+    await usuarioServicio.eliminarTodos();
+    res.json({ mensaje: 'Todos los usuarios fueron eliminados.' });
+  } catch (error) {
+    next(error);
+  }
+}
+
+
 module.exports = {
   listarUsuarios,
   obtenerUsuario,
   crearUsuario,
-  eliminarUsuario
+  eliminarUsuario,
+  eliminarTodos
 };

@@ -1,3 +1,5 @@
+const { all } = require("../routes/claseRutas");
+
 module.exports = (sequelize, DataTypes) => {
   const Usuario = sequelize.define('Usuario', {
     id: {
@@ -47,6 +49,11 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
       //---------------------
+    },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: true
     }
   }, {
     tableName: 'usuarios',
