@@ -9,11 +9,8 @@ const claseRutas = require('./routes/claseRutas');
 const app = express();
 const PORT = 3000;
 
-
 // Middlewares globales
-
 app.use(express.json());
-
 
 // Rutas
 
@@ -32,6 +29,8 @@ app.use('/clases', claseRutas);
 sequelize.authenticate()
   .then(() => {
     console.log('✅ Conectado a MySQL correctamente');
+    // Si querés que altere la estructura según los modelos:
+    // return sequelize.sync({ alter: true });
     return sequelize.sync();
   })
   .then(() => {

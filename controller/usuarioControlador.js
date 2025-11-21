@@ -39,13 +39,25 @@ async function eliminarUsuario(req, res, next) {
   } catch (error) {
     if (error.message === 'USUARIO_NO_EXISTE') {
       res.status(404).json({ error: 'Usuario no encontrado' });
-    } else next(error);
+    } 
+    else next(error);
   }
 }
+
+async function eliminarTodos(req, res, next) {
+  try {
+    await usuarioServicio.eliminarTodos();
+    res.json({ mensaje: 'Todos los usuarios fueron eliminados.' });
+  } catch (error) {
+    next(error);
+  }
+}
+
 
 module.exports = {
   listarUsuarios,
   obtenerUsuario,
   crearUsuario,
-  eliminarUsuario
+  eliminarUsuario,
+  eliminarTodos
 };

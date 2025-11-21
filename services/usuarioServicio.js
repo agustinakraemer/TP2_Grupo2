@@ -13,7 +13,8 @@ async function crearUsuario(datos) {
   return await Usuario.create({
     nombre: datos.nombre,
     email: datos.email,
-    telefono: datos.telefono
+    telefono: datos.telefono,
+    isAdmin: datos.isAdmin || false
   });
 }
 
@@ -24,9 +25,15 @@ async function eliminarUsuario(id) {
   return usuario;
 }
 
+async function eliminarTodos() {
+  await Usuario.destroy({ where: {}, truncate: { cascade: true } });
+}
+
+
 module.exports = {
   obtenerTodos,
   obtenerPorId,
   crearUsuario,
-  eliminarUsuario
+  eliminarUsuario,
+  eliminarTodos
 };
