@@ -13,7 +13,7 @@ async function crearReserva(req, res, next) {
   }
 }
 
-// (Opcional) GET /reservas/clase/:idClase
+
 async function listarPorClase(req, res, next) {
   try {
     const { idClase } = req.params;

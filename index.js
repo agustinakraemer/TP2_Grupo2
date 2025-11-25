@@ -29,8 +29,6 @@ app.use('/clases', claseRutas);
 sequelize.authenticate()
   .then(() => {
     console.log('✅ Conectado a MySQL correctamente');
-    // Si querés que altere la estructura según los modelos:
-    // return sequelize.sync({ alter: true });
     return sequelize.sync();
   })
   .then(() => {

@@ -1,4 +1,3 @@
-//Habla con la base de datos usando Sequelize
 const { Usuario } = require('../models');
 
 async function obtenerTodos() {

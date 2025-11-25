@@ -13,7 +13,7 @@ router.get('/:adminId',esAdmin, usuarioControlador.listarUsuarios);
 router.get('/:id/:adminId',esAdmin, usuarioControlador.obtenerUsuario);
 router.post('/:adminId', esAdmin, usuarioControlador.crearUsuario);
 router.delete('/:id/:adminId',esAdmin, usuarioControlador.eliminarUsuario);
-router.delete('/:adminId',esAdmin, usuarioControlador.eliminarTodos); // DELETE /usuarios
+router.delete('/:adminId',esAdmin, usuarioControlador.eliminarTodos); 
 
 module.exports = router;
 

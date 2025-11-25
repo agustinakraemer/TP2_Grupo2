@@ -1,6 +1,4 @@
-// Habla con la base de datos usando Sequelize
 const { Clase } = require('../models'); 
-// Asume que existe un modelo 'Clase'
 
 /**
  * Trae todas las clases de la base de datos.

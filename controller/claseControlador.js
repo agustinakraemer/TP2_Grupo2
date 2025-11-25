@@ -29,9 +29,6 @@ async function crearClase(req, res, next) {
     const nuevaClase = await claseServicio.crearClase(req.body);
     res.status(201).json(nuevaClase); 
   } catch (error) {
-//if (error.errors && error.errors[0].validatorName === 'isDate') {
-//return res.status(400).json({ error: 'La fecha proporcionada no es válida.' });
-//}
     next(error);
   }
 }
@@ -45,7 +42,6 @@ async function actualizarClase(req, res, next) {
       return res.status(404).json({ error: 'Clase no encontrada para actualizar' });
     }
 
-    // Opcional: devuelve el objeto actualizado
     const claseActualizada = await claseServicio.obtenerPorId(req.params.id);
     res.json(claseActualizada);
 

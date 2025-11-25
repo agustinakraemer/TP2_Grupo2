@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "El nombre debe tener entre 2 y 100 caracteres"
         }
       }
-      //----------------
     },
     fecha: {
       type: DataTypes.DATEONLY,
@@ -29,7 +28,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "La fecha debe tener un formato válido (YYYY-MM-DD)"
         }
       }
-      //----------------
     },
     hora: {
       type: DataTypes.STRING,
@@ -40,7 +38,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "La hora es obligatoria"
         }
       }
-      //----------------
     },
     capacidad: {
       type: DataTypes.INTEGER,
@@ -55,7 +52,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "La capacidad mínima es 1"
         }
       }
-      //----------------
     }
   }, {
     tableName: 'clases',

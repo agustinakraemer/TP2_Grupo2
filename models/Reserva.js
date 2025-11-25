@@ -18,7 +18,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "El idUsuario debe ser mayor o igual a 1"
         }
       }
-      //------------------
     },
     idClase: {
       type: DataTypes.INTEGER,
@@ -33,7 +32,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "El idClase debe ser mayor o igual a 1"
         }
       }
-      //--------------------
     },
     estado: {
       type: DataTypes.STRING,
@@ -45,7 +43,6 @@ module.exports = (sequelize, DataTypes) => {
           msg: "El estado debe ser confirmada o cancelada"
         }
       }
-      //----------------------
     }
   }, {
     tableName: 'reservas',
