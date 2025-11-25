@@ -7,13 +7,8 @@ const PORT = 3000;
 
 app.use(express.json());
 
-// Ruta de prueba
-app.get('/ping', (req, res) => {
-  res.json({ mensaje: 'pong 🏓' });
-});
-
 //CONECTAMOS LAS RUTAS DE USUARIOS
-console.log("✅ Cargando rutas de usuarios...");
+console.log("Cargando rutas de usuarios...");
 app.use('/usuarios', usuarioRutas);
 
 //-----------------------------------------------
@@ -22,8 +17,14 @@ app.use('/usuarios', usuarioRutas);
 const claseRutas = require('./routes/claseRutas');
 
 //CONECTAMOS LAS RUTAS DE CLASES
-console.log("✅ Cargando rutas de clases...");
+console.log("Cargando rutas de clases...");
 app.use('/clases', claseRutas); 
+
+//-----------------------------------------------
+
+app.use((req, res, next) => {
+  res.status(404).json({ error: 'Ruta no encontrada' });
+});
 
 //-----------------------------------------------
 
