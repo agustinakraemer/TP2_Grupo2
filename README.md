@@ -22,9 +22,11 @@ Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
 DB_NAME=tp2_pilates
 DB_USER=root
-DB_PASSWORD=TU_PASSWORD
+DB_PASSWORD=Mysql123
 DB_HOST=localhost
+DB_PORT=3306       
 DB_DIALECT=mysql
+
 
 ````
 

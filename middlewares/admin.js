@@ -2,11 +2,9 @@ const usuarioServicio = require('../services/usuarioServicio');
 
 async function esAdmin(req, res, next) {
   try {
-    console.log('🔥 esAdmin() - adminId recibido:', req.params.adminId);
 
     const usuario = await usuarioServicio.obtenerPorId(req.params.adminId);
 
-    console.log('🔥 esAdmin() - usuario encontrado:', usuario);
 
     if (!usuario) {
       return res.status(404).json({
